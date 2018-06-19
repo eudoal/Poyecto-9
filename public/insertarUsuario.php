@@ -14,7 +14,7 @@ use Daw\models\Sesion;
   </head>
   <body>
     <h1 text align="center">Introduce tus datos</h1><br>
-      <center><form action="listadoUsuarios.php" method="post" onsubmit="return comprobarInsertar()">
+      <center><form action="index.php" method="post" onsubmit="return comprobarInsertar()">
 
         <p text align="center">Email</p>
         <input type="text" value="" id="correo" name="correo">

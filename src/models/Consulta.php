@@ -17,7 +17,7 @@ class Consulta
   public function insertarUsuario()
 {
 
-  if (isset($_POST["Registros"])) {
+
      if ($this->conector->connect_errno) {
         echo "Fallo al conectar a MySQL: " . $conector->connect_errno;
       }else  {
@@ -36,7 +36,7 @@ class Consulta
 
     }
 }
-}
+
 
   public function actualizarUsuario()
 {
@@ -110,7 +110,15 @@ class Consulta
       $resultado = $this->conector->query("SELECT * FROM usuarios");
       return $resultado;
   }
+    public function getPuntuacion()
+    {
+        $result = $this->conector->query("SELECT puntuacion FROM usuarios WHERE nombre = '$_POST[usuario]'");
+        while ($fila = $result->fetch_assoc()) {
+            return $fila['puntuacion'];
+        }
 
+
+    }
 
 
 }
