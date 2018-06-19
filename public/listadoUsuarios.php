@@ -33,9 +33,14 @@ td {
   </body>
 
   <?php
+/*
+  if (isset($_POST["Registros"]))
 
+  {
+      $consulta->insertarUsuario();
 
-
+  }
+*/
       if (isset($_POST["actualizar"])) {
         $consulta->actualizarUsuario();
 

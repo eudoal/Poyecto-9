@@ -26,6 +26,7 @@ class Consulta
 
         if ($this->conector->query($registro) === TRUE) {
           echo "<br><h1 align = center>Registro Completado</h1><br>";
+
         }else {
           ?>
           <center><img src="images/8C1.gif" alt="AGGGGHHHHHH" /></center>

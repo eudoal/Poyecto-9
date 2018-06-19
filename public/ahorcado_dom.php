@@ -23,9 +23,11 @@ $sesion->set('nombre', $_POST['usuario']);
   </head>
   <body>
    <!-- <center><input type="button" value="reiniciar" onclick="javascript:window.location.reload();"/></center> -->
-    <h1>Hola <?php echo $sesion->get('nombre'); ?></h1>
+   <br>
+    <h1 ALIGN=center id="parrafo1">Hola <?php echo $sesion->get('nombre'); ?></h1>
     <h1 ALIGN=center id="parrafo1"><b>Bienvenido al juego del AHORCADO</b></h1>
-    <p ALIGN=center id="parrafo2">tu puntuación actual es de: <?php echo $consulta->getPuntuacion(); ?> </p>
+    <p ALIGN=center id="parrafo2">tu puntuación actual es de:</p>
+   <h2 ALIGN=center id="parrafo1"><?php echo $consulta->getPuntuacion(); ?> </h2>
     <p ALIGN=center id="parrafo2">ADIVINA LA PALABRA</p>
     <h1 ALIGN=center id="intentos"></h1>
 
@@ -47,6 +49,11 @@ $sesion->set('nombre', $_POST['usuario']);
 
     <script type="text/javascript" src="js/ahorcado_dom.js">
     </script>
+   <form action="index.php">
+       <p align="center">
+           <input type="submit" value="Seleccionar Usuario" />
+       </p>
+   </form>
 
   </body>
 </html>
