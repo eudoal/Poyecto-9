@@ -33,10 +33,16 @@ if ($sesion->get('nombre') != "admin") {
                     </option>
                 <?php } ?>
             </select>
-
+    <br><br>
       <input type="submit" name="eliminar" value="Borrar usuario">
     </form></center>
 
   <script src="js/comprobarInsertar.js"></script>
+
+    <form action="index.php">
+        <p align="center">
+            <input type="submit" value="LogOut" />
+        </p>
+    </form>
   </body>
 </html>

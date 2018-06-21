@@ -21,10 +21,10 @@ table, th, td {
 }
 
 th {
-  background-color: #0D9D0F;
+  background-color: #BDBDBD;
   }
 td {
-  background-color: #9FE99F;
+  background-color: #F2F2F2;
   text-align: center;
 }
 </style>
@@ -50,23 +50,18 @@ td {
         $consulta->borrar();
 
         }
+
+  if (isset($_POST["preactualizar"])) {
+      $consulta->preactualizar();
+
+  }
       ?>
-
-
-
-
-
-
-
-
-
-
 
     <table style="width:60%" align="center">
     <tr>
-        <th >CORREO</th>
         <th >NOMBRE</th>
         <th >APELLIDOS</th>
+        <th >CORREO</th>
         <th >EDAD</th>
         <th >CURSO</th>
         <th >PUNTUACIÓN</th>
@@ -77,9 +72,9 @@ $seleccion = $consulta->getUsuarios();
       foreach ($seleccion as $fila) {
 
         echo "<tr>"."<td>"
-        .$fila['correo']."</td>"."<td>"
         .$fila['nombre']."</td>"."<td>"
         .$fila['apellidos']."</td>"."<td>"
+        .$fila['correo']."</td>"."<td>"
         .$fila['edad']."</td>"."<td>"
         .$fila['curso']."</td>"."<td>"
         .$fila['puntuacion']."</td>"."</tr>";
@@ -93,9 +88,9 @@ $seleccion = $consulta->getUsuarios();
     <tr>
         <th ><a href="actualizarUsuario.php">Actualizar usuario</a></th>
         <th ><a href="borrarUsuario.php">Borrar usuario</a></th>
-        </tr>
+    </tr>
 </table>
-<br>
+
   <form action="index.php">
       <p align="center">
           <input type="submit" value="LogOut" />

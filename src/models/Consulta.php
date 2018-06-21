@@ -96,6 +96,13 @@ class Consulta
          <?php
          echo "<h1 align = center>Por favor, introduce un Nombre válido</h1><br>";
       }
+         if ($nombre == "admin") {
+             echo "<br><h1 align = center>No puedes borra al Administrador</h1><br>";
+             ?>
+             <center><img src="images/8C1.gif" /></center>
+             <?php
+             echo "<h1 align = center>Por favor, introduce un Nombre válido</h1><br>";
+         }
           else {
           $borrar = "DELETE FROM usuarios WHERE nombre = '$_POST[newNombre]'";
 

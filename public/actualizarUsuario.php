@@ -25,14 +25,15 @@ if ($sesion->get('nombre') != "admin") {
 
         <p text align="center">Introduce el tu Nombre y cambia los demás campos</p>
 
-        <p text align="center">Email</p>
-        <input type="text" value="" id="correo" name="correo">
 
         <p text align="center">Nombre</p>
         <input type="text" value="" id="nombre" name="newNombre">
 
         <p text align="center">Apellidos</p>
         <input type="text" value="" id="apellidos" name="newApellidos">
+
+        <p text align="center">Email</p>
+        <input type="text" value="" id="correo" name="correo">
 
         <p text align="center">Edad</p>
         <input type="text" value="" id="edad" name="newEdad">
@@ -43,5 +44,11 @@ if ($sesion->get('nombre') != "admin") {
         <input type="submit" name="actualizar" value="Actualizar"> </form></center>
 
       <script src="js/comprobarInsertar.js"></script>
+<br>
+    <form action="listadoUsuarios.php">
+        <p align="center">
+            <input type="submit" value="Listado" />
+        </p>
+    </form>
   </body>
 </html>
