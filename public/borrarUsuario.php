@@ -22,8 +22,17 @@ if ($sesion->get('nombre') != "admin") {
     <h1 text align="center">Introduce tu Nombre para borrar tu usuario<br></h1>
 
     <center><form action="listadoUsuarios.php" method="post" onsubmit="return comprobarInsertar()">
-
-          <input type="text" name="newNombre" id="nombre" placeholder="Nombre usuario:">
+            <select  name="newNombre">
+                <option value="">Elige usuario</option>
+                <?php
+                $listado = $consulta->getUsuarios();
+                foreach ($listado as $fila) {
+                    ?>
+                    <option value="<?= $fila['nombre'] ?>">
+                        <?php echo $fila['nombre']?>
+                    </option>
+                <?php } ?>
+            </select>
 
       <input type="submit" name="eliminar" value="Borrar usuario">
     </form></center>
