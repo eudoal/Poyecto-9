@@ -2,6 +2,13 @@
 require __DIR__.'/../vendor/autoload.php';
 use Daw\models\Consulta;
 use Daw\models\Sesion;
+
+$consulta = new Consulta();
+$sesion  = new Sesion();
+$sesion->start();
+if ($sesion->get('nombre') != "admin") {
+    header("Location: index.php");
+}
 ?>
 
 

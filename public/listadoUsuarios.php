@@ -93,9 +93,12 @@ $seleccion = $consulta->getUsuarios();
     <tr>
         <th ><a href="actualizarUsuario.php">Actualizar usuario</a></th>
         <th ><a href="borrarUsuario.php">Borrar usuario</a></th>
-        <th ><a href="insertarUsuario.php">Nuevo usuario</a></th>
-    </tr>
+        </tr>
 </table>
-<br></br>
-<br></br>
+<br>
+  <form action="index.php">
+      <p align="center">
+          <input type="submit" value="LogOut" />
+      </p>
+  </form>
 </html>

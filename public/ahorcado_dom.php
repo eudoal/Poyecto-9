@@ -8,6 +8,12 @@ $consulta = new Consulta();
 $sesion  = new Sesion();
 $sesion->start();
 $sesion->set('nombre', $_POST['usuario']);
+if ($sesion->get('nombre') == "admin") {
+    header("Location: listadoUsuarios.php");
+}
+if ($sesion->get('nombre') == "") {
+   header("Location: index.php");
+}
 
 
 
@@ -51,7 +57,7 @@ $sesion->set('nombre', $_POST['usuario']);
     </script>
    <form action="index.php">
        <p align="center">
-           <input type="submit" value="Seleccionar Usuario" />
+           <input type="submit" value="LogOut" />
        </p>
    </form>
 
